@@ -15,7 +15,6 @@ formatData='dd/mm/yyyy'; %Pay attention to your computer settings
 [datesSet, ratesSet] = readExcelData('MktData_CurveBootstrap', formatData);
 
 %% Bootstrap
-format long
 % Computes Euribor 3m bootstrap with a single-curve model
 
 % dates includes SettlementDate as first date

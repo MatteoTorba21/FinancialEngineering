@@ -71,7 +71,7 @@ rho = sqrt(R);
 
 % Minimum number of Monte Carlo Scenarios
 N = 100000;
-% N = N * 100;       % Uncomment for convergence test (10,000,000 scenarios)
+%N = N * 100;       % Uncomment for convergence test (10,000,000 scenarios)
 
 
 %% Q1: CreditMetrics' FV (let's start with all bonds rated IG)

@@ -1,7 +1,7 @@
 function zRates = zeroRates(dates, discounts)
 % Obtain zero Rates from the discounts and their dates
 %
-% INPUT:
+%I NPUT:
 % dates:        vector of the dates for which we have the discount
 % discounts:    vector of the discounts from the settlement day to the
 %               date in the same position in the vector dates

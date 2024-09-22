@@ -26,8 +26,7 @@ BondPrice = couponRate*deltas'*DFAtPayment+1*DFAtPayment(end);
 
 % Floating leg
 % Floating leg dates:
-FloatingLegDates = findFloatingLegDates(settlementDate,3)
-datestr(FloatingLegDates)
+FloatingLegDates = findFloatingLegDates(settlementDate,3);
 % Deltas for the floating leg:
 deltas_floatingleg = yearfrac([settlementDate; FloatingLegDates(1:end-1)],FloatingLegDates,FLCount);
 % Discount factors fot the floating leg cashflows:

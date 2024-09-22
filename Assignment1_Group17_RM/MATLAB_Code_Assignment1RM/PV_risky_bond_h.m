@@ -16,7 +16,7 @@ function [ PV ] = PV_risky_bond_h(cf_schedule, h_curve, ZC_curve, R)
 
 % Spline interpolation of the zero coupon rates for all the cash flow dates:
 rates = interp1(ZC_curve(:,1),ZC_curve(:,2),cf_schedule(:,1),'spline');
-% Discoun cqxts for pure interest rates:
+% Discounts for pure interest rates:
 discounts = exp(-cf_schedule(:,1).*rates);
 
 % Create a vector in which every element of the second column of h_curve is replicated twice

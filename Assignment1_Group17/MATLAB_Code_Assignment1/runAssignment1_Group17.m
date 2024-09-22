@@ -2,7 +2,7 @@
 %  Group 17, AA2023-2024
 %  Alessandro Torazzi, Matteo Torba, Giovanni Urso, Chiara Zucchelli
 clc, clear, close
-rng(111)
+
 %% Pricing parameters
 S0 = 1;                   % underlying price
 K = 1;                    % strike price
@@ -42,11 +42,6 @@ end
 
 NotionalOptionPrice = OptionPrice*Noptions; % option price for 1 Mln of contracts
 printOptionPrices(NotionalOptionPrice,1)
-
-%%
-OptionPrice(pricingMode) = EuropeanOptionPrice(F0,K,B,TTM,sigma,1,M,1)-EuropeanOptionPrice(F0,K,B,TTM,sigma,1,M,-1)
-
-
 
 %% Errors Rescaling 
 % plot Errors for CRR varing number of steps
@@ -140,7 +135,7 @@ PlotMCAVTerror(nMC,stdEstim,MCAVTerr);
 
 %% Bermudan Options
 % We compute the price of the Bermudan option via the CRR approach
-N = 1e2; % CRR steps
+N = 1e3; % CRR steps
 BermudanOptionPriceCRR = BermudanOptionCRR(F0,K,r,TTM,EEfreq,sigma,N);
 NotionalBermudanOptionPrice = BermudanOptionPriceCRR*Noptions
 

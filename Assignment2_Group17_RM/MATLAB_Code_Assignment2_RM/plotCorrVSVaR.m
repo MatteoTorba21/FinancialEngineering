@@ -1,7 +1,6 @@
 function plotCorrVSVaR(rho,VaR_Def_200,VaR_DM_200,VaR_Def_20,VaR_DM_20)
 % Function to plot the obtained results for different values of correlation
 
-
 figure(1)
 plot(rho,VaR_Def_200,'--*',LineWidth=1.5)
 hold on
